@@ -13,7 +13,7 @@
 // export function MetaHead(props: MetaHeadProps) {
 //   const { date, title, imageUrl, description, ogUrl } = props;
 
-//   const titleName = title || 'Analytics Roundtable';
+//   const titleName = title || 'Dan Cramer';
 
 //   return (
 //     <Head>

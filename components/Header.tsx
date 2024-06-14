@@ -5,8 +5,8 @@ import { links } from "@/site";
 const Header = () => {
   return (
     <>
-      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-white py-4">
-        <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
+      <div className="sticky top-0 z-50 py-4 bg-white backdrop-blur-lg bg-opacity-30">
+        <div className="flex flex-row items-center justify-between max-w-5xl px-4 m-auto">
           {/* Logo */}
           <div className="flex flex-row items-center">
             <Link className="" href="/">
@@ -17,8 +17,8 @@ const Header = () => {
                 alt="AnalyticsRoundtable"
               />
             </Link>
-          <Link className="hidden sm:block ml-1 font-medium text-gray-800" href="/">
-          Analytics Roundtable
+          <Link className="hidden ml-1 font-medium text-gray-800 sm:block" href="/">
+         Dan Cramer
           </Link>
           </div>
 
@@ -28,7 +28,7 @@ const Header = () => {
               {links.map((link) => (
                 <li
                   key={link.id}
-                  className="block hover:text-sky-400 text-sm"
+                  className="block text-sm hover:text-sky-400"
                 >
                   <Link href={link.to}>{link.name}</Link>
                 </li>
