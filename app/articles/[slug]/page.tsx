@@ -39,25 +39,25 @@ export default async function Page({
   const tagPosts: Article[] = await getTagFilteredPosts({ tags, slug: String(slug) });
 
   return (
-    <div className="space-y-5 max-w-7xl m-auto min-h-screen">
+    <div className="min-h-screen m-auto space-y-5 max-w-7xl">
       <img className="object-cover w-full h-52 xl:rounded-[20px] aspect-video" src={postDetails.coverImage} />
 
       <div>
-        <div className="text-center space-y-5 text-sm mx-auto mt-3">
+        <div className="mx-auto mt-3 space-y-5 text-sm text-center">
           <div className="tracking-tight sm:text-4xl">
             {postDetails.title}
           </div>
-          <div className="text-md leading-8 sm:mt-4">
+          <div className="leading-8 text-md sm:mt-4">
             <div>
               <time dateTime={formattedTime}>{formattedTime}</time>
             </div>
             <div className="font-semibold">
               {postDetails.author}
             </div>
-            <SocialshareButtons
+            {/* <SocialshareButtons
         shareUrl={`http://localhost:3000/${postDetails.slug}?id=${postDetails.id}`}
         title={postDetails.title}
-      />
+      /> */}
           </div>
 
 
@@ -65,7 +65,7 @@ export default async function Page({
         </div>
 
 
-        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4">
+        <div className="max-w-4xl px-6 pt-4 mx-auto mt-4 mb-24 space-y-8 border-t md:px-8">
           <NotionRenderer blockMap={blockMap} />
 
         </div>
