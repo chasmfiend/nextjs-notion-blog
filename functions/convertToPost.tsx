@@ -13,6 +13,6 @@ export const convertToPost = (item: any): Article => ({
   summary: item.properties.summary.rich_text.map(
     (textObj: { text: { content: string } }) => textObj.text.content
   ),
-  coverImage: item.properties?.coverImage?.files[0]?.file?.url,
+  coverImage: item.cover?.external?.url,
   author: item.properties.author.created_by.name
 });

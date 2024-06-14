@@ -40,7 +40,7 @@ export default async function Page({
 
   return (
     <div className="min-h-screen m-auto space-y-5 max-w-7xl">
-      <img className="object-cover w-full h-52 xl:rounded-[20px] aspect-video" src={postDetails.coverImage} />
+      <img alt="" className="object-cover w-full h-52 xl:rounded-[20px] aspect-video" src={postDetails.coverImage} />
 
       <div>
         <div className="mx-auto mt-3 space-y-5 text-sm text-center">
